@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   <Provider store={store}>
     <PersistGate  persistor={persistor}>
-      <BrowserRouter  basename="/E-Pharmacy">
+      <BrowserRouter  basename="/FinancialScorel">
           <ThemeProvider theme = {theme}>
              <App />
           </ThemeProvider>
