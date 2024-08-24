@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/FinancialScorel/static/css/main.9d51a071.css",
+    "main.js": "/FinancialScorel/static/js/main.fcc0945c.js",
+    "static/js/257.d338e533.chunk.js": "/FinancialScorel/static/js/257.d338e533.chunk.js",
+    "static/js/677.c0392150.chunk.js": "/FinancialScorel/static/js/677.c0392150.chunk.js",
+    "static/media/notification.svg?s3g3t9": "/FinancialScorel/static/media/notification.5d0158671dd860c714c4.svg",
+    "static/media/notification.eot": "/FinancialScorel/static/media/notification.3657084dc0419605a91c.eot",
+    "static/media/notification.woff?s3g3t9": "/FinancialScorel/static/media/notification.c392cd33d9d9de730f9d.woff",
+    "static/media/notification.ttf?s3g3t9": "/FinancialScorel/static/media/notification.c5d9251ea82e42f75381.ttf",
+    "index.html": "/FinancialScorel/index.html",
+    "main.9d51a071.css.map": "/FinancialScorel/static/css/main.9d51a071.css.map",
+    "main.fcc0945c.js.map": "/FinancialScorel/static/js/main.fcc0945c.js.map",
+    "257.d338e533.chunk.js.map": "/FinancialScorel/static/js/257.d338e533.chunk.js.map",
+    "677.c0392150.chunk.js.map": "/FinancialScorel/static/js/677.c0392150.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d51a071.css",
+    "static/js/main.fcc0945c.js"
+  ]
+}
