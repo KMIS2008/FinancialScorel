@@ -34,3 +34,6 @@ const storesSlice = createSlice({
 })
 
 export const storesReducer = storesSlice.reducer;
+
+
+// key=2HPjK2OODfH1nUYL

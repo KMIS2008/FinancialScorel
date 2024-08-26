@@ -2,9 +2,11 @@ import {Form, Error, Input, Label, Button} from "./DataForm.styled";
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addData } from "redux/operations";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string(),
@@ -12,7 +14,7 @@ const SignupSchema = Yup.object().shape({
 
 export const DataForm=()=>{
     const navigate=useNavigate();
-    // const dispatch=useDispatch();
+    const dispatch=useDispatch();
 
     const handleNavigate=()=>{
         navigate('/liquidity-analysis')
@@ -63,15 +65,18 @@ export const DataForm=()=>{
     const onSubmit = async (data, e) => {
       e.preventDefault();
       try {
-          // await dispatch(getProductsFilter(data));
+        const _id=nanoid();
+        const newData={...data, _id}
+          await dispatch(addData(newData));
           handleNavigate();
           reset();
+          setSearchValue(""); 
       } catch (errors) {
           alert(errors.message)
       }
   };
       const [searchValue, setSearchValue] = useState("");
-  
+
       const handleInputChange = (e) => {
         setSearchValue(e.target.value);
     };
