@@ -15,6 +15,7 @@ import { refreshUser } from 'redux/auth/operations';
 import { lazy, Suspense  } from 'react';
 
 const Home = lazy(()=> import('Pages/Home/Home'));
+const LiquidityAnalysis= lazy(()=> import('Pages/LiquidityAnalysis/LiquidityAnalysis'));
 // const MedicineStorePage = lazy(()=> import('Pages/MedicineStorePage/MedicineStorePage'));
 // const MedicinePage = lazy(()=> import('Pages/MedicinePage/MedicinePage'));
 // const ProdactPage = lazy(()=> import('Pages/ProductPage/ProductPage'));
@@ -60,12 +61,12 @@ const ErrorPage = lazy(()=> import ('Pages/ErrorPage/ErrorPage'));
              <Route path = "/" element = {<SharedLayout/>}>
              <Route index element={<Navigate to="/home" />} />
              <Route path="home" element={<Home/>}/>
-             {/* <Route path="medicine-store" element={<MedicineStorePage/>}/>
-             <Route path="medicine" element={<MedicinePage/>}/>
-             <Route path='product' element={<ProdactPage/>}/>
-             <Route path='register' element={<RegisterPage/>}/>
-             <Route path = "login" element ={<RestrictedRoute redirectTo="/" component={<LoginPage/>} />}/>
-             <Route path="cart" element={ <PrivateRoute redirectTo="/login" component={<CartPage/>} />}/> */}
+              <Route path="liquidity-analysis" element={<LiquidityAnalysis/>}/>
+            {/* //  <Route path="medicine" element={<MedicinePage/>}/>
+            //  <Route path='product' element={<ProdactPage/>}/>
+            //  <Route path='register' element={<RegisterPage/>}/>
+            //  <Route path = "login" element ={<RestrictedRoute redirectTo="/" component={<LoginPage/>} />}/>
+            //  <Route path="cart" element={ <PrivateRoute redirectTo="/login" component={<CartPage/>} />}/>  */}
              <Route path="*" element={<ErrorPage/>} />
             </Route>
           </Routes>

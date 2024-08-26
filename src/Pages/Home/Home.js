@@ -1,15 +1,11 @@
-import {ContainerHome} from "./Homestyled";
-
+import { DataForm } from "components/DataForm/DataForm"
 
 export default function Home(){
 
-
-  
 return (
-    <ContainerHome>
-      <p>xru</p>
-
-       
-    </ContainerHome>
+<>
+   <DataForm/>
+</>
+ 
 )
 }
