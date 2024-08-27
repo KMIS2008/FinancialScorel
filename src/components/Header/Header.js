@@ -2,10 +2,15 @@ import {Container, Title, Name, Svg} from './Header.styled';
 import {Burgermenu} from '../BurgerMenu/BurgerMenu';
 import { useEffect, useState } from 'react';
 import sprite from '../../images/sprite.svg';
+import {selectIdData} from '../../redux/data/selects';
+import { useDispatch, useSelector } from 'react-redux';
+import {fetchdata} from '../../redux/operations';
 
 export const Header = () => {
   const [isOpen, setOpen]=useState(false);
   const [isTablet, setIsTablet] = useState(window.innerWidth < 1440);
+  const data = useSelector(selectIdData);
+  const dispatch=useDispatch();
 
   const handleBurgerMenu = () => {
     setOpen(!isOpen);
@@ -22,10 +27,16 @@ export const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    dispatch(fetchdata());
+  }, [dispatch]);
+
+  const nameCompany = data.length > 0 ? data[data.length - 1].nameCompany : 'Company Name';
+
   return (
     <Container>
       <Title>Financial scoring</Title>
-      <Name>dgfdfhdfhdfh</Name>
+      <Name>{nameCompany}</Name>
 
       {isTablet&& <Svg onClick={handleBurgerMenu}>
             <use xlinkHref={sprite + '#icon-burgermenu'} />

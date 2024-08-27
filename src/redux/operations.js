@@ -2,17 +2,16 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { NotificationManager } from 'react-notifications';
+// import { NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
 axios.defaults.baseURL =  "https://financial-scoring-backend.onrender.com/api";
-// "https://e-pharmacy-backend-1.onrender.com/api";
 
-const DATA_URL= '/data';
+// const DATA_URL= '/data';
 
 export const fetchdata = createAsyncThunk('data', async(_, thunkAPI)=>{
     try {
-        const response = await axios.get(`${DATA_URL}`);
+        const response = await axios.get("https://financial-scoring-backend.onrender.com/api/data");
         return response.data;
         
     } catch (e){
@@ -31,7 +30,7 @@ export const fetchdata = createAsyncThunk('data', async(_, thunkAPI)=>{
 
 export const addData = createAsyncThunk('data/add', async(data, thunkAPI)=>{
     try {
-        const response = await axios.post(`${DATA_URL}`, data);
+        const response = await axios.post("https://financial-scoring-backend.onrender.com/api/data", data);
     
         return response.data;
     } catch (e){

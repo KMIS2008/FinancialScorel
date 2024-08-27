@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch } from "react-redux";
 import { addData } from "redux/operations";
-import { useState } from "react";
+// import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid";
 
@@ -56,9 +56,7 @@ export const DataForm=()=>{
     //     }),
     // };
   
-  const { register, handleSubmit, 
-    // setValue, 
-    formState: { errors },reset} = useForm({
+  const { register, handleSubmit, formState: { errors },reset} = useForm({
       resolver: yupResolver(SignupSchema),
     });
   
@@ -70,16 +68,16 @@ export const DataForm=()=>{
           await dispatch(addData(newData));
           handleNavigate();
           reset();
-          setSearchValue(""); 
+        //   setSearchValue(""); 
       } catch (errors) {
           alert(errors.message)
       }
   };
-      const [searchValue, setSearchValue] = useState("");
+    //   const [searchValue, setSearchValue] = useState("");
 
-      const handleInputChange = (e) => {
-        setSearchValue(e.target.value);
-    };
+    //   const handleInputChange = (e) => {
+    //     setSearchValue(e.target.value);
+    // };
 
     
     return(
@@ -88,14 +86,14 @@ export const DataForm=()=>{
 <Label htmlFor="nameCompany">Name company</Label>
   <Input
     id="nameCompany"
-    name='name'
+    name='nameCompany'
     type='text'
-    value={searchValue}
-    onChange={handleInputChange}
+    // value={searchValue}
+    // onChange={handleInputChange}
     placeholder="Name company"
-    {...register('name')}
+    {...register('nameCompany')}
   />
-{errors.category && <Error>{errors.category.message}</Error>}
+{errors.name && <Error>{errors.name.message}</Error>}
 
 <Button type="submit" >
     Send Info
