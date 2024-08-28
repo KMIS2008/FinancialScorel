@@ -17,7 +17,7 @@ export const LiquidityAnalysisForm=()=>{
       const currentRatio=(currentAssets/currentLiabilities).toFixed(2);
 
       const stocks= data.length > 0 ? data[data.length - 1].stocks : '';
-      const quickRatio=((currentAssets-stocks)/currentLiabilities).toFixed(2);
+      const quickRatio=((+currentAssets- +stocks)/currentLiabilities).toFixed(2);
 
       const money=data.length > 0 ? data[data.length - 1].money : '';
       const cashRatio=(money/currentLiabilities).toFixed(2);

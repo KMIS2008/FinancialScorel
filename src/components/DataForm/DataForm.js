@@ -166,10 +166,62 @@ export const DataForm=()=>{
        id="totalAssets"
        name='totalAssets'
        type='text'
-       placeholder="Total assets (balance 1900)"
+       placeholder="Total assets (balance 100)"
        {...register('totalAssets')}
     />
       {errors.totalAssets && <Error>{errors.totalAssets.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="liabilities">Зобов’язання</Label>
+      <Input
+       id="liabilities"
+       name='liabilities'
+       type='text'
+       placeholder="Liabilities(balance 1595+1695)"
+       {...register('liabilities')}
+     />
+       {errors.liabilities && <Error>{errors.liabilities.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="longTermLiabilities">Довгострокові зобов’язання</Label>
+       <Input
+       id="longTermLiabilities"
+       name='longTermLiabilities'
+       type='text'
+       placeholder="Long-term Liabilities (balance 1595)"
+       {...register('longTermLiabilities')}
+    />
+      {errors.longTermLiabilities && <Error>{errors.longTermLiabilities.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="netProfit">Чистий прибуток</Label>
+      <Input
+       id="netProfit"
+       name='netProfit'
+       type='text'
+       placeholder="Net profit(fin 2350)"
+       {...register('netProfit')}
+     />
+       {errors.netProfit && <Error>{errors.netProfit.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="revenue">Чистий дохід від реалізації</Label>
+       <Input
+       id="revenue"
+       name='revenue'
+       type='text'
+       placeholder="Revenue (fin 2000)"
+       {...register('revenue')}
+    />
+      {errors.revenue && <Error>{errors.revenue.message}</Error>}
     </ContainerColumn>
 </ContainerFlex>
 

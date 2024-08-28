@@ -17,14 +17,8 @@ import { lazy, Suspense  } from 'react';
 const Home = lazy(()=> import('Pages/Home/Home'));
 const LiquidityAnalysis= lazy(()=> import('Pages/LiquidityAnalysis/LiquidityAnalysis'));
 const FinancialStrength= lazy(()=> import('Pages/FinancialStrength/FinancialStrength'));
-
-
-// const MedicineStorePage = lazy(()=> import('Pages/MedicineStorePage/MedicineStorePage'));
-// const MedicinePage = lazy(()=> import('Pages/MedicinePage/MedicinePage'));
-// const ProdactPage = lazy(()=> import('Pages/ProductPage/ProductPage'));
-// const CartPage = lazy(()=> import('Pages/CartPage/CartPage'));
-// const RegisterPage= lazy(()=> import('Pages/RegisterPage/RegisterPage'));
-// const LoginPage = lazy(()=> import ('Pages/LoginPage/LoginPage'));
+const IndicatorsProfitability =lazy(()=> import('Pages/IndicatorsProfitability/IndicatorsProfitability'));
+const AssetEfficiency=lazy(()=> import('Pages/AssetEfficiency/AssetEfficiency'));
 
 const ErrorPage = lazy(()=> import ('Pages/ErrorPage/ErrorPage'));
 
@@ -66,11 +60,10 @@ const ErrorPage = lazy(()=> import ('Pages/ErrorPage/ErrorPage'));
              <Route path="home" element={<Home/>}/>
               <Route path="liquidity-analysis" element={<LiquidityAnalysis/>}/>
               <Route path="financia-strength" element={<FinancialStrength/>}/>
+              <Route path="indicators-profitability" element={<IndicatorsProfitability/>}/>
+              <Route path="asset-efficiency" element={<AssetEfficiency/>}/>
 
-            {/* //  <Route path="medicine" element={<MedicinePage/>}/>
-            //  <Route path='product' element={<ProdactPage/>}/>
-            //  <Route path='register' element={<RegisterPage/>}/>
-            //  <Route path = "login" element ={<RestrictedRoute redirectTo="/" component={<LoginPage/>} />}/>
+            {/* //  <Route path = "login" element ={<RestrictedRoute redirectTo="/" component={<LoginPage/>} />}/>
             //  <Route path="cart" element={ <PrivateRoute redirectTo="/login" component={<CartPage/>} />}/>  */}
              <Route path="*" element={<ErrorPage/>} />
             </Route>
