@@ -15,9 +15,15 @@ export const NavigationLinks=({onClose})=>{
         onClose();
     }
 
+    const handleNavigateFinancialStrength=()=>{
+        navigate('/financia-strength')
+        onClose();
+    }
+
     return(<Container>
         <Button type='button' onClick={handleNavigateHome}>Home</Button>
         <Button type='button' onClick={handleNavigateLiguidityAnalysis}>Liquidity analysis</Button>
-
+        <Button type='button' onClick={handleNavigateFinancialStrength}>Financial strength</Button>
+ 
     </Container>)
 }

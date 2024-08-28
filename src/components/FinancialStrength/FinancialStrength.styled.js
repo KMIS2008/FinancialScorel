@@ -18,21 +18,3 @@ justify-content: space-between;
 gap:5px;
 align-items: center;
 `
-
-export const ContainerAnalis=styled.ul`
-padding: ${p=>p.theme.spacing(2)};
-`
-
-export const Span=styled.span`
-text-decoration: underline;
-color: ${({ $Bad, $Good }) => 
-    $Bad ? 'red' : 
-    $Good ? 'green' : 
-    'black'
-  };
-`
-
-export const Text=styled.p`
-margin-bottom: 10px;
-text-align: justify;
-`

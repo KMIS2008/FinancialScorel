@@ -1,4 +1,4 @@
-import {Form, Error, Input, Label, Button} from "./DataForm.styled";
+import {Form, Error, Input, Label, Button, ContainerFlex, ContainerColumn} from "./DataForm.styled";
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -93,7 +93,85 @@ export const DataForm=()=>{
     placeholder="Name company"
     {...register('nameCompany')}
   />
-{errors.name && <Error>{errors.name.message}</Error>}
+   {errors.name && <Error>{errors.name.message}</Error>}
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="currentAssets">Поточні активи</Label>
+      <Input
+       id="currentAssets"
+       name='currentAssets'
+       type='text'
+       placeholder="Current Assets(balance 1195)"
+       {...register('currentAssets')}
+     />
+       {errors.currentAssets && <Error>{errors.currentAssets.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="currentLiabilities">Поточні зобов’язання</Label>
+       <Input
+       id="currentLiabilities"
+       name='currentLiabilities'
+       type='text'
+       placeholder="Current Liabilities (balance 1695)"
+       {...register('currentLiabilities')}
+    />
+      {errors.currentLiabilities && <Error>{errors.currentLiabilities.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="stocks">Поточні активи</Label>
+      <Input
+       id="stocks"
+       name='stocks'
+       type='text'
+       placeholder="Stocks(balance 1100)"
+       {...register('stocks')}
+     />
+       {errors.stocks && <Error>{errors.stocks.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="money">Грошові кошти</Label>
+       <Input
+       id="money"
+       name='money'
+       type='text'
+       placeholder="Money (balance 1165)"
+       {...register('money')}
+    />
+      {errors.CurrentLiabilities && <Error>{errors.CurrentLiabilities.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="equity">Власний капітал</Label>
+      <Input
+       id="equity"
+       name='equity'
+       type='text'
+       placeholder="Equity(balance 1495)"
+       {...register('equity')}
+     />
+       {errors.equity && <Error>{errors.equity.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="totalAssets">Загальні активи</Label>
+       <Input
+       id="totalAssets"
+       name='totalAssets'
+       type='text'
+       placeholder="Total assets (balance 1900)"
+       {...register('totalAssets')}
+    />
+      {errors.totalAssets && <Error>{errors.totalAssets.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
 
 <Button type="submit" >
     Send Info

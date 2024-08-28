@@ -19,6 +19,7 @@ letter-spacing: -0.03em;
 
 export const Input =styled.input`
 margin-bottom: ${p=>p.theme.spacing(2)};
+margin-top: ${p=>p.theme.spacing(1)};
 width: 100%;
 height: 44px;
 padding: 0 0 0 20px;
@@ -36,7 +37,6 @@ border: 1px solid #1D1E2133;
 `
 
 export const Label=styled.label`
-margin-bottom: ${p=>p.theme.spacing(2)};
 padding-left: ${p=>p.theme.spacing(3)};
 `
 
@@ -53,5 +53,21 @@ cursor: pointer;
 
 &:hover{
     background: ${p=>p.theme.colors.yellow}; 
+}
+`
+
+export const ContainerFlex=styled.div`
+@media (min-width: 768px) {
+  display: flex;
+gap:5px;
+}
+
+`
+
+export const ContainerColumn=styled.div`
+@media (min-width: 768px) {
+display: flex;
+flex-direction: column;
+gap:5px;
 }
 `
