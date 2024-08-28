@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/FinancialScorel/static/css/main.9d51a071.css",
-    "main.js": "/FinancialScorel/static/js/main.433ca128.js",
-    "static/js/524.6e5bb975.chunk.js": "/FinancialScorel/static/js/524.6e5bb975.chunk.js",
-    "static/js/722.293ee249.chunk.js": "/FinancialScorel/static/js/722.293ee249.chunk.js",
-    "static/js/326.0d17db01.chunk.js": "/FinancialScorel/static/js/326.0d17db01.chunk.js",
+    "main.js": "/FinancialScorel/static/js/main.7233c0b3.js",
+    "static/js/524.c91a7bd0.chunk.js": "/FinancialScorel/static/js/524.c91a7bd0.chunk.js",
+    "static/js/722.81701011.chunk.js": "/FinancialScorel/static/js/722.81701011.chunk.js",
+    "static/js/326.36ea06ce.chunk.js": "/FinancialScorel/static/js/326.36ea06ce.chunk.js",
+    "static/js/763.559f40aa.chunk.js": "/FinancialScorel/static/js/763.559f40aa.chunk.js",
+    "static/js/754.5862487b.chunk.js": "/FinancialScorel/static/js/754.5862487b.chunk.js",
     "static/js/677.c0392150.chunk.js": "/FinancialScorel/static/js/677.c0392150.chunk.js",
     "static/js/487.dcdd08a1.chunk.js": "/FinancialScorel/static/js/487.dcdd08a1.chunk.js",
     "static/media/sprite.svg": "/FinancialScorel/static/media/sprite.31a718b0f9e37ad3652158ba2a01a379.svg",
@@ -14,15 +16,17 @@
     "static/media/notification.ttf?s3g3t9": "/FinancialScorel/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/FinancialScorel/index.html",
     "main.9d51a071.css.map": "/FinancialScorel/static/css/main.9d51a071.css.map",
-    "main.433ca128.js.map": "/FinancialScorel/static/js/main.433ca128.js.map",
-    "524.6e5bb975.chunk.js.map": "/FinancialScorel/static/js/524.6e5bb975.chunk.js.map",
-    "722.293ee249.chunk.js.map": "/FinancialScorel/static/js/722.293ee249.chunk.js.map",
-    "326.0d17db01.chunk.js.map": "/FinancialScorel/static/js/326.0d17db01.chunk.js.map",
+    "main.7233c0b3.js.map": "/FinancialScorel/static/js/main.7233c0b3.js.map",
+    "524.c91a7bd0.chunk.js.map": "/FinancialScorel/static/js/524.c91a7bd0.chunk.js.map",
+    "722.81701011.chunk.js.map": "/FinancialScorel/static/js/722.81701011.chunk.js.map",
+    "326.36ea06ce.chunk.js.map": "/FinancialScorel/static/js/326.36ea06ce.chunk.js.map",
+    "763.559f40aa.chunk.js.map": "/FinancialScorel/static/js/763.559f40aa.chunk.js.map",
+    "754.5862487b.chunk.js.map": "/FinancialScorel/static/js/754.5862487b.chunk.js.map",
     "677.c0392150.chunk.js.map": "/FinancialScorel/static/js/677.c0392150.chunk.js.map",
     "487.dcdd08a1.chunk.js.map": "/FinancialScorel/static/js/487.dcdd08a1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d51a071.css",
-    "static/js/main.433ca128.js"
+    "static/js/main.7233c0b3.js"
   ]
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/754.5862487b.chunk.js","mappings":"2LAAe,SAASA,IACpB,OAAOC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,GAGX,C","sources":["Pages/AssetEfficiency/AssetEfficiency.js"],"sourcesContent":["export default function AssetEfficiency(){\n    return(<>\n      \n    </>)\n}"],"names":["AssetEfficiency","_jsx","_Fragment"],"sourceRoot":""}
