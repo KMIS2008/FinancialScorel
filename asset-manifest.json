@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/FinancialScorel/static/css/main.9d51a071.css",
-    "main.js": "/FinancialScorel/static/js/main.efc3203d.js",
-    "static/js/611.3455ecbe.chunk.js": "/FinancialScorel/static/js/611.3455ecbe.chunk.js",
-    "static/js/773.a9c2ca71.chunk.js": "/FinancialScorel/static/js/773.a9c2ca71.chunk.js",
-    "static/js/535.6a84e01e.chunk.js": "/FinancialScorel/static/js/535.6a84e01e.chunk.js",
-    "static/js/607.e48b03db.chunk.js": "/FinancialScorel/static/js/607.e48b03db.chunk.js",
-    "static/js/936.75e28bac.chunk.js": "/FinancialScorel/static/js/936.75e28bac.chunk.js",
-    "static/js/718.f6864bf5.chunk.js": "/FinancialScorel/static/js/718.f6864bf5.chunk.js",
-    "static/js/89.c0ab7fbf.chunk.js": "/FinancialScorel/static/js/89.c0ab7fbf.chunk.js",
+    "main.js": "/FinancialScorel/static/js/main.5d437de8.js",
+    "static/js/524.f4704aa3.chunk.js": "/FinancialScorel/static/js/524.f4704aa3.chunk.js",
+    "static/js/773.7055cab4.chunk.js": "/FinancialScorel/static/js/773.7055cab4.chunk.js",
+    "static/js/535.b222b483.chunk.js": "/FinancialScorel/static/js/535.b222b483.chunk.js",
+    "static/js/607.81cbfff4.chunk.js": "/FinancialScorel/static/js/607.81cbfff4.chunk.js",
+    "static/js/936.aed53443.chunk.js": "/FinancialScorel/static/js/936.aed53443.chunk.js",
+    "static/js/718.ffac7ffc.chunk.js": "/FinancialScorel/static/js/718.ffac7ffc.chunk.js",
+    "static/js/89.4d71936c.chunk.js": "/FinancialScorel/static/js/89.4d71936c.chunk.js",
     "static/js/677.c0392150.chunk.js": "/FinancialScorel/static/js/677.c0392150.chunk.js",
-    "static/js/586.14be60db.chunk.js": "/FinancialScorel/static/js/586.14be60db.chunk.js",
+    "static/js/487.dcdd08a1.chunk.js": "/FinancialScorel/static/js/487.dcdd08a1.chunk.js",
     "static/media/sprite.svg": "/FinancialScorel/static/media/sprite.31a718b0f9e37ad3652158ba2a01a379.svg",
     "static/media/notification.svg?s3g3t9": "/FinancialScorel/static/media/notification.5d0158671dd860c714c4.svg",
     "static/media/notification.eot": "/FinancialScorel/static/media/notification.3657084dc0419605a91c.eot",
@@ -18,19 +18,19 @@
     "static/media/notification.ttf?s3g3t9": "/FinancialScorel/static/media/notification.c5d9251ea82e42f75381.ttf",
     "index.html": "/FinancialScorel/index.html",
     "main.9d51a071.css.map": "/FinancialScorel/static/css/main.9d51a071.css.map",
-    "main.efc3203d.js.map": "/FinancialScorel/static/js/main.efc3203d.js.map",
-    "611.3455ecbe.chunk.js.map": "/FinancialScorel/static/js/611.3455ecbe.chunk.js.map",
-    "773.a9c2ca71.chunk.js.map": "/FinancialScorel/static/js/773.a9c2ca71.chunk.js.map",
-    "535.6a84e01e.chunk.js.map": "/FinancialScorel/static/js/535.6a84e01e.chunk.js.map",
-    "607.e48b03db.chunk.js.map": "/FinancialScorel/static/js/607.e48b03db.chunk.js.map",
-    "936.75e28bac.chunk.js.map": "/FinancialScorel/static/js/936.75e28bac.chunk.js.map",
-    "718.f6864bf5.chunk.js.map": "/FinancialScorel/static/js/718.f6864bf5.chunk.js.map",
-    "89.c0ab7fbf.chunk.js.map": "/FinancialScorel/static/js/89.c0ab7fbf.chunk.js.map",
+    "main.5d437de8.js.map": "/FinancialScorel/static/js/main.5d437de8.js.map",
+    "524.f4704aa3.chunk.js.map": "/FinancialScorel/static/js/524.f4704aa3.chunk.js.map",
+    "773.7055cab4.chunk.js.map": "/FinancialScorel/static/js/773.7055cab4.chunk.js.map",
+    "535.b222b483.chunk.js.map": "/FinancialScorel/static/js/535.b222b483.chunk.js.map",
+    "607.81cbfff4.chunk.js.map": "/FinancialScorel/static/js/607.81cbfff4.chunk.js.map",
+    "936.aed53443.chunk.js.map": "/FinancialScorel/static/js/936.aed53443.chunk.js.map",
+    "718.ffac7ffc.chunk.js.map": "/FinancialScorel/static/js/718.ffac7ffc.chunk.js.map",
+    "89.4d71936c.chunk.js.map": "/FinancialScorel/static/js/89.4d71936c.chunk.js.map",
     "677.c0392150.chunk.js.map": "/FinancialScorel/static/js/677.c0392150.chunk.js.map",
-    "586.14be60db.chunk.js.map": "/FinancialScorel/static/js/586.14be60db.chunk.js.map"
+    "487.dcdd08a1.chunk.js.map": "/FinancialScorel/static/js/487.dcdd08a1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d51a071.css",
-    "static/js/main.efc3203d.js"
+    "static/js/main.5d437de8.js"
   ]
 }
