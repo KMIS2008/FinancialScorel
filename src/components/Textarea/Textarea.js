@@ -15,7 +15,7 @@ const SignupSchema = Yup.object().shape({
 export const Textarea=({ liquidityRatios, isFinancialStrength, isIndicatorsOfProfitability, isIndicatorsAssetEfficiency, isOtherIndicatorsProfitability })=>{
     const dispatch=useDispatch();
 
-    const { register, handleSubmit, formState: { errors } } =  useForm({
+    const { register, handleSubmit, formState: { errors }, reset } =  useForm({
         resolver: yupResolver(SignupSchema),
       });
 
@@ -28,8 +28,9 @@ export const Textarea=({ liquidityRatios, isFinancialStrength, isIndicatorsOfPro
                          ...isIndicatorsOfProfitability,
                          ...isIndicatorsAssetEfficiency, 
                          ...isOtherIndicatorsProfitability
-                        }
-      dispatch(addFinancial(indicators))
+                        };
+      dispatch(addFinancial(indicators));
+      reset();
   };
     return( 
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -45,7 +46,7 @@ export const Textarea=({ liquidityRatios, isFinancialStrength, isIndicatorsOfPro
       <p>Коментар не може перевищувати 500 символів</p>
     )}
 
-    <SubmitButton type="submit">Надіслати</SubmitButton>
+    <SubmitButton type="submit">Зберегти</SubmitButton>
   </Form>
   )
 }

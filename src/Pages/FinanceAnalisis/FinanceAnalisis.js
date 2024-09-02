@@ -1,4 +1,4 @@
-import {Title, TitleItem} from './FinanceAnalisis.styled';
+import {Title, TitleItem, SubmitButton} from './FinanceAnalisis.styled';
 import {LiquidityAnalysisForm} from '../../components/LiquidityAnalysisForm/LiquidityAnalysisForm';
 import {FinancialStrength} from '../../components/FinancialStrength/FinancialStrength';
 import {IndicatorsOfProfitability} from '../../components/IndicatorsOfProfitability/IndicatorsOfProfitability';
@@ -7,7 +7,25 @@ import {OtherIndicatorsProfitability} from '../../components/OtherIndicatorsProf
 import {Textarea} from '../../components/Textarea/Textarea';
 import { useState } from 'react';
 
+import React, { useRef } from 'react';
+import htmlDocx from 'html-docx-js/dist/html-docx';
+import { saveAs } from 'file-saver';
+
 export default function FinanceAnalisis(){
+    const contentRef = useRef();
+
+    // Функція для експорту в DOCX
+    const handleExport = () => {
+      // Отримуємо HTML-контент з елемента
+      const content = contentRef.current.innerHTML;
+  
+      // Конвертуємо HTML-контент в формат DOCX
+      const docx = htmlDocx.asBlob(content);
+  
+      // Завантажуємо DOCX-файл
+      saveAs(docx, 'document.docx');
+    };
+    
     const [liquidityRatios, setLiquidityRatios] = useState({
         currentRatio: '',
         quickRatio: '',
@@ -33,6 +51,7 @@ export default function FinanceAnalisis(){
     })
     
     return(<>
+    <div ref={contentRef}>
           <Title>  Fiancial analisis </Title>
           <TitleItem>Liquidity analysis</TitleItem>
           <LiquidityAnalysisForm setLiquidityRatios={setLiquidityRatios} />
@@ -49,5 +68,10 @@ export default function FinanceAnalisis(){
                     isIndicatorsOfProfitability={isIndicatorsOfProfitability}
                     isIndicatorsAssetEfficiency={isIndicatorsAssetEfficiency}
                     isOtherIndicatorsProfitability={isOtherIndicatorsProfitability}/>
+
+          
+    </div>
+    
+         <SubmitButton type='button' onClick={handleExport}>Експортувати в DOCX</SubmitButton>
     </>)
 }
