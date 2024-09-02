@@ -54,11 +54,11 @@ export const FinancialStrength=()=>{
           {debtToEquityRatio>2&&<Text> 2. <Span $Bad>Debt to Equity Ratio більше 2.</Span>Підприємство має надмірну залежність від боргів і підвищений ризик.</Text>}
        </li>
 
-       {/* <li>
+       <li>
           {(financialStabilityRatio>0.2&&financialStabilityRatio<0.5)&&<Text> 3. <Span $Good>Financial Stability Ratio більше 0,2 та меньше 0,5.</Span>Це значення важається прийнятним, оскільки підприємство має достатньо грошових коштів для покриття 20-50% своїх короткострокових зобов'язань. Це є показником здорової фінансової позиції, при якій компанія не тримає надмірно великий обсяг грошових коштів без використання.</Text>}
           {financialStabilityRatio>0.5&&<Text> 3. <Span>Financial Stability Ratio більше 0,5.</Span>Це свідчить про те, що компанія має надмірну кількість грошових коштів, які не використовуються ефективно, наприклад, для інвестицій або розвитку бізнесу.</Text>}
           {financialStabilityRatio<0.2&&<Text> 3. <Span $Bad>Financial Stability Ratio меньше 0,2.</Span>Це вказує на потенційні проблеми з ліквідністю, оскільки компанія має недостатньо грошових коштів для швидкого покриття своїх зобов'язань.</Text>}
-       </li> */}
+       </li>
      </ContainerAnalis>
 
       </>

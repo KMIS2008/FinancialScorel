@@ -19,7 +19,8 @@ const LiquidityAnalysis= lazy(()=> import('Pages/LiquidityAnalysis/LiquidityAnal
 const FinancialStrength= lazy(()=> import('Pages/FinancialStrength/FinancialStrength'));
 const IndicatorsProfitability =lazy(()=> import('Pages/IndicatorsProfitability/IndicatorsProfitability'));
 const AssetEfficiency=lazy(()=> import('Pages/AssetEfficiency/AssetEfficiency'));
-
+const OtherIndicators =lazy(()=> import('Pages/OtherIndicators/OtherIndicators'));
+const FinanceAnalisis=lazy(()=> import('Pages/FinanceAnalisis/FinanceAnalisis')); 
 const ErrorPage = lazy(()=> import ('Pages/ErrorPage/ErrorPage'));
 
     export const App =()=> {
@@ -62,6 +63,8 @@ const ErrorPage = lazy(()=> import ('Pages/ErrorPage/ErrorPage'));
               <Route path="financia-strength" element={<FinancialStrength/>}/>
               <Route path="indicators-profitability" element={<IndicatorsProfitability/>}/>
               <Route path="asset-efficiency" element={<AssetEfficiency/>}/>
+              <Route path="other-indicators" element={<OtherIndicators/>}/>
+              <Route path="financial-analisis" element={<FinanceAnalisis/>}/>
 
             {/* //  <Route path = "login" element ={<RestrictedRoute redirectTo="/" component={<LoginPage/>} />}/>
             //  <Route path="cart" element={ <PrivateRoute redirectTo="/login" component={<CartPage/>} />}/>  */}

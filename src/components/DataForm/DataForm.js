@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch } from "react-redux";
 import { addData } from "redux/operations";
-// import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid";
 
@@ -17,44 +16,8 @@ export const DataForm=()=>{
     const dispatch=useDispatch();
 
     const handleNavigate=()=>{
-        navigate('/liquidity-analysis')
+        navigate('/financial-analisis')
     }
-
-    // const customStyles = {
-    //   placeholder: (provided) => ({
-    //     ...provided,
-    //     color: '#1D1E2166', 
-    //   }),
-    //   control: (provided, state) => ({
-    //     ...provided,
-    //     height: '44px',
-    //     padding: '0 0 0 20px',
-    //     marginBottom: '10px',
-    //     borderRadius: '60px',
-    //     border: state.isFocused ? '1px solid #59B17A' : '1px solid #1D1E2133',
-    //     '&:hover': {
-    //       border: '1px solid #59B17A',
-    //     },
-    //   }),
-     
-    //   option: (provided, state) => ({
-    //     ...provided,
-    //     border: 'none',
-    //     padding: '0 20px',
-  
-    //     fontFamily: 'Inter',
-    //     fontSize: '12px',
-    //     fontWeight: '400',
-    //     lineHeight: '1.5',
-    //     letterSpacing: '-0.03em',
-    //     color: state.isSelected ? '#fff' : '#1D1E21',
-    //     backgroundColor: state.isSelected ? '#59B17A' : '#fff',
-    //   }),
-  
-    //   indicatorSeparator: (provided) => ({
-    //       display: 'none',
-    //     }),
-    // };
   
   const { register, handleSubmit, formState: { errors },reset} = useForm({
       resolver: yupResolver(SignupSchema),
@@ -68,28 +31,20 @@ export const DataForm=()=>{
           await dispatch(addData(newData));
           handleNavigate();
           reset();
-        //   setSearchValue(""); 
       } catch (errors) {
           alert(errors.message)
       }
   };
-    //   const [searchValue, setSearchValue] = useState("");
 
-    //   const handleInputChange = (e) => {
-    //     setSearchValue(e.target.value);
-    // };
-
-    
+  
     return(
      <Form onSubmit={handleSubmit(onSubmit)}>
 
-<Label htmlFor="nameCompany">Name company</Label>
+<Label htmlFor="nameCompany">Назва компанії</Label>
   <Input
     id="nameCompany"
     name='nameCompany'
     type='text'
-    // value={searchValue}
-    // onChange={handleInputChange}
     placeholder="Name company"
     {...register('nameCompany')}
   />
@@ -222,6 +177,124 @@ export const DataForm=()=>{
        {...register('revenue')}
     />
       {errors.revenue && <Error>{errors.revenue.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="cost">Собівартість реалізованих товарів</Label>
+      <Input
+       id="cost"
+       name='cost'
+       type='text'
+       placeholder="Сost(fin 2050)"
+       {...register('cost')}
+     />
+       {errors.cost && <Error>{errors.cost.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="stocksFirst">Запаси на початку періода</Label>
+       <Input
+       id="stocksFirst"
+       name='stocksFirst'
+       type='text'
+       placeholder="Stocks First (balance 1100)"
+       {...register('stocksFirst')}
+    />
+      {errors.stocksFirst && <Error>{errors.stocksFirst.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="stocksFinish">Запаси на кінець періода</Label>
+      <Input
+       id="stocksFinish"
+       name='stocksFinish'
+       type='text'
+       placeholder="stocksFinish(balance 1100)"
+       {...register('stocksFinish')}
+     />
+       {errors.stocksFinish && <Error>{errors.stocksFinish.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="accountsReceivableFist">Дебіторська заборгованість на початок періоду</Label>
+       <Input
+       id="accountsReceivableFist"
+       name='accountsReceivableFist'
+       type='text'
+       placeholder="Accounts receivable first(balance 1125)"
+       {...register('accountsReceivableFist')}
+    />
+      {errors.accountsReceivableFist && <Error>{errors.accountsReceivableFist.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="accountsReceivableFinish">Дебіторська заборгованість на кінець періода</Label>
+      <Input
+       id="accountsReceivableFinish"
+       name='accountsReceivableFinish'
+       type='text'
+       placeholder="Accounts receivable finish(balance 1125)"
+       {...register('accountsReceivableFinish')}
+     />
+       {errors.accountsReceivableFinish && <Error>{errors.accountsReceivableFinish.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="longTermFinancialInvestments">Довгострокові фінансові інвестиції</Label>
+       <Input
+       id="longTermFinancialInvestments"
+       name='longTermFinancialInvestments'
+       type='text'
+       placeholder="long-term financial investments (balance 1030+1035)"
+       {...register('longTermFinancialInvestments')}
+    />
+      {errors.longTermFinancialInvestments && <Error>{errors.longTermFinancialInvestments.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="currentFinancialInvestments">Поточні фінансові інвестиції</Label>
+      <Input
+       id="currentFinancialInvestments"
+       name='currentFinancialInvestments'
+       type='text'
+       placeholder="Current financial investments(balance 1160)"
+       {...register('currentFinancialInvestments')}
+     />
+       {errors.currentFinancialInvestments && <Error>{errors.currentFinancialInvestments.message}</Error>}     
+    </ContainerColumn>
+
+   <ContainerColumn>
+       <Label htmlFor="operatingProfit">Операційний прибуток</Label>
+       <Input
+       id="operatingProfit"
+       name='operatingProfit'
+       type='text'
+       placeholder="Operating Profit (fin 2190+2195)"
+       {...register('operatingProfit')}
+    />
+      {errors.operatingProfit && <Error>{errors.operatingProfit.message}</Error>}
+    </ContainerColumn>
+</ContainerFlex>
+
+<ContainerFlex>
+    <ContainerColumn>
+      <Label htmlFor="interestExpenses">Витрати на відсотки</Label>
+      <Input
+       id="interestExpenses"
+       name='interestExpenses'
+       type='text'
+       placeholder="Interest expenses(money 3360)"
+       {...register('interestExpenses')}
+     />
+       {errors.interestExpenses && <Error>{errors.interestExpenses.message}</Error>}     
     </ContainerColumn>
 </ContainerFlex>
 
