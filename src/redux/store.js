@@ -2,11 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from "./auth/authSlice";
 import {dataReducer} from './data/dataSlice';
-// import {reviewsReducer} from './rewies/rewiesSlice';
-// import {nearestReducer} from './nearest/nearestSlice';
-// import {storesReducer} from './stores/storesSlices';
-// import {productsReducer} from '../redux/product/productsSlice';
-// import {orderReducer} from './Cart/cartSlice';
+import {financialReducer} from './finance/finance';
 
 import {
   persistStore,
@@ -30,12 +26,8 @@ export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     data: dataReducer,
-    // reviews: reviewsReducer,
-    // nearest: nearestReducer,
-    // stores: storesReducer,
-    // products: productsReducer,
-    // orders: orderReducer,
-    // finishorders:orderReducer,
+    indicators: financialReducer,
+
   },
   
   middleware: getDefaultMiddleware =>

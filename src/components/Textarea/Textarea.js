@@ -3,20 +3,33 @@ import { useForm } from 'react-hook-form';
 import {Form, Label, CommentTextArea, SubmitButton} from './Textarea.styled'
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { addFinancial } from 'redux/operations';
+import { useDispatch } from 'react-redux';
+import { nanoid } from 'nanoid';
 
 const SignupSchema = Yup.object().shape({
     comment: Yup.string()
       .max(500, 'Коментар не може перевищувати 500 символів'), 
   });
 
-export const Textarea=()=>{
+export const Textarea=({ liquidityRatios, isFinancialStrength, isIndicatorsOfProfitability, isIndicatorsAssetEfficiency, isOtherIndicatorsProfitability })=>{
+    const dispatch=useDispatch();
+
     const { register, handleSubmit, formState: { errors } } =  useForm({
         resolver: yupResolver(SignupSchema),
       });
 
   const onSubmit = (data) => {
-    // Обробка даних форми, наприклад, надсилання на сервер
-    console.log(data);
+     const _id=nanoid();
+     const indicators = {_id, 
+                         ...data, 
+                         ...liquidityRatios, 
+                         ...isFinancialStrength,
+                         ...isIndicatorsOfProfitability,
+                         ...isIndicatorsAssetEfficiency, 
+                         ...isOtherIndicatorsProfitability
+                        }
+      dispatch(addFinancial(indicators))
   };
     return( 
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -24,7 +37,7 @@ export const Textarea=()=>{
     <Label htmlFor="comment">Коментар:</Label>
     <CommentTextArea
       id="comment"
-      {...register('comment', { required: false, maxLength: 500 })} // Валідація: обов'язкове поле, максимум 500 символів
+      {...register('comment', { required: false, maxLength: 500 })}
       placeholder="Напишіть ваш коментар"
     ></CommentTextArea>
 

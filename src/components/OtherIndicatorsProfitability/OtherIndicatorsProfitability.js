@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 
-export const OtherIndicatorsProfitability=()=>{
+export const OtherIndicatorsProfitability=({setOtherIndicatorsProfitability})=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -20,6 +20,10 @@ export const OtherIndicatorsProfitability=()=>{
     const operatingProfit= data.length > 0 ? data[data.length - 1].operatingProfit : '';
     const interestExpenses = data.length > 0 ? data[data.length - 1].interestExpenses : '';
     const interestCoverageRatio=(operatingProfit/interestExpenses).toFixed(2);
+
+    useEffect(()=>{
+      setOtherIndicatorsProfitability({returnOnInvestment, interestCoverageRatio})
+    }, [returnOnInvestment, interestCoverageRatio, setOtherIndicatorsProfitability])
 
 
     return(<>

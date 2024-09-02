@@ -5,21 +5,49 @@ import {IndicatorsOfProfitability} from '../../components/IndicatorsOfProfitabil
 import {IndicatorsAssetEfficiency} from '../../components/IndicatorsAssetEfficiency/IndicatorsAssetEfficiency';
 import {OtherIndicatorsProfitability} from '../../components/OtherIndicatorsProfitability/OtherIndicatorsProfitability';
 import {Textarea} from '../../components/Textarea/Textarea';
+import { useState } from 'react';
 
 export default function FinanceAnalisis(){
+    const [liquidityRatios, setLiquidityRatios] = useState({
+        currentRatio: '',
+        quickRatio: '',
+        cashRatio: ''
+    });
+    const [isFinancialStrength, setFinancialStrength] =useState({
+        equityRatio:'',
+        debtToEquityRatio: '',
+        financialStabilityRatio: '' })
+    const [isIndicatorsOfProfitability, setIndicatorsOfProfitability]=useState({
+        returnonAssets: "", 
+        returnOnEquity: '', 
+        returnOnSales: '',
+    })
+    const [isIndicatorsAssetEfficiency, setIndicatorsAssetEfficiency]=useState({
+        assetTurnoverRatio: '',
+        inventoryTurnoverRatio:'',
+        accountsReceivableTurnoverRatio: '',
+    })
+    const [isOtherIndicatorsProfitability, setOtherIndicatorsProfitability]=useState({
+        returnOnInvestment:'', 
+        interestCoverageRatio:'',
+    })
+    
     return(<>
           <Title>  Fiancial analisis </Title>
           <TitleItem>Liquidity analysis</TitleItem>
-          <LiquidityAnalysisForm/>
+          <LiquidityAnalysisForm setLiquidityRatios={setLiquidityRatios} />
           <TitleItem>Financial strength</TitleItem>
-          <FinancialStrength/>
+          <FinancialStrength setFinancialStrength={setFinancialStrength}/>
           <TitleItem>Indicators of profitability</TitleItem>
-          <IndicatorsOfProfitability/>
+          <IndicatorsOfProfitability setIndicatorsOfProfitability={setIndicatorsOfProfitability}/>
           <TitleItem>Indicator asset efficiency</TitleItem>
-          <IndicatorsAssetEfficiency/>
+          <IndicatorsAssetEfficiency setIndicatorsAssetEfficiency={setIndicatorsAssetEfficiency}/>
           <TitleItem>Other indicators profitability</TitleItem>
-          <OtherIndicatorsProfitability/>
-          <Textarea/>
-          
+          <OtherIndicatorsProfitability setOtherIndicatorsProfitability={setOtherIndicatorsProfitability}/>
+          <Textarea liquidityRatios={liquidityRatios} 
+                    isFinancialStrength={isFinancialStrength} 
+                    isIndicatorsOfProfitability={isIndicatorsOfProfitability}
+                    isIndicatorsAssetEfficiency={isIndicatorsAssetEfficiency}
+                    isOtherIndicatorsProfitability={isOtherIndicatorsProfitability}/>
     </>)
 }

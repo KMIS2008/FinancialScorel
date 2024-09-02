@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 
-export const FinancialStrength=()=>{
+export const FinancialStrength=({setFinancialStrength})=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -21,6 +21,11 @@ export const FinancialStrength=()=>{
 
       const longTermLiabilities=data.length > 0 ? data[data.length - 1].longTermLiabilities : '';
       const financialStabilityRatio=((+equity + +longTermLiabilities)/totalAssets).toFixed(2);
+
+      
+      useEffect(() => {
+        setFinancialStrength({ equityRatio, debtToEquityRatio, financialStabilityRatio });
+    }, [equityRatio, debtToEquityRatio, financialStabilityRatio, setFinancialStrength]);
 
     return(
       <>
