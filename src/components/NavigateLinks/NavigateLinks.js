@@ -1,9 +1,11 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {Container, Button} from './NavigateLinks.styled';
 
-export const NavigationLinks=({onClose})=>{
+export const NavigationLinks=({onClose, isHeader=false})=>{
     const navigate=useNavigate();
-   
+    const location = useLocation(); 
+
+    const isActive = (path) => location.pathname === path;
 
     const handleNavigateHome=()=>{
         navigate('/home');
@@ -40,14 +42,43 @@ export const NavigationLinks=({onClose})=>{
         onClose();
     }
 
-    return(<Container>
-        <Button type='button' onClick={handleNavigateHome}>Home</Button>
-        <Button type='button' onClick={handleNavigateLiguidityAnalysis}>Liquidity analysis</Button>
-        <Button type='button' onClick={handleNavigateFinancialStrength}>Financial strength</Button>
-        <Button type='button' onClick={handleNavigateIndicators}>Indicators of profitability</Button>
-        <Button type='button' onClick={handleNavigateAssetEfficiency}>Indicators asset efficiency</Button>
-        <Button type='button' onClick={handleNavigateOtherIndicators}>Other indicators profitability</Button>
-        <Button type='button' onClick={handleFinancialAnalisis}>Financial analysis </Button>
- 
+    return(
+    <Container $isHeader={isHeader}>
+        <Button $isHeader={isHeader} 
+                $isActive={isActive('/home')}
+                type='button' 
+                onClick={handleNavigateHome}
+                >Home</Button>
+        <Button $isHeader={isHeader} 
+                $isActive={isActive('/liquidity-analysis')}
+                type='button' 
+                onClick={handleNavigateLiguidityAnalysis}
+                >Liquidity analysis</Button>
+        <Button $isHeader={isHeader} 
+                $isActive={isActive('/financia-strength')}
+                type='button' 
+                onClick={handleNavigateFinancialStrength}
+                >Financial strength</Button>
+        <Button $isHeader={isHeader} 
+                $isActive={isActive('/indicators-profitability')}
+                type='button' 
+                onClick={handleNavigateIndicators}
+                >Indicators of profitability</Button>
+        <Button $isHeader={isHeader} 
+                $isActive={isActive('/asset-efficiency')}
+                type='button' 
+                onClick={handleNavigateAssetEfficiency}
+                >Indicators asset efficiency</Button>
+        <Button $isHeader={isHeader} 
+                $isActive={isActive('/other-indicators')}
+                type='button' 
+                onClick={handleNavigateOtherIndicators}
+                >Other indicators profitability</Button>
+        <Button $isHeader={isHeader} 
+                $isActive={isActive('/financial-analisis')}
+                $isFinish={true}
+                type='button' 
+                onClick={handleFinancialAnalisis}
+                >Financial analysis </Button>
     </Container>)
 }

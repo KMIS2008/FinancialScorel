@@ -2,6 +2,16 @@ import styled from 'styled-components';
 
 export const Form=styled.form`
 padding: ${p=>p.theme.spacing(2)};
+
+@media (min-width: 768px) {
+  padding-left: ${p=>p.theme.spacing(10)};
+  padding-right: ${p=>p.theme.spacing(10)};
+}
+
+@media (min-width: 1440px) {
+  padding-left: ${p=>p.theme.spacing(20)};
+  padding-right: ${p=>p.theme.spacing(20)};
+}
 `
 
 export const CommentTextArea = styled.textarea`
@@ -33,7 +43,7 @@ export const SubmitButton = styled.button`
   &:hover {
     background-color: #45a049;
   }
-  
+
 `;
 
 export const Label=styled.label`

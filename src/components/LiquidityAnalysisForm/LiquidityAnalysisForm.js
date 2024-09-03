@@ -1,10 +1,10 @@
-import {Container, Number, ContainerCurrentRatio,ContainerAnalis, Span, Text} from './LiquidityAnalysisForm.styled';
+import {Container, Number, Tittle, ContainerCurrentRatio,ContainerAnalis, Span, Text} from './LiquidityAnalysisForm.styled';
 import { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 
-export const LiquidityAnalysisForm=({ setLiquidityRatios })=>{
+export const LiquidityAnalysisForm=({ setLiquidityRatios=()=>{}})=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -25,24 +25,23 @@ export const LiquidityAnalysisForm=({ setLiquidityRatios })=>{
       useEffect(() => {
         setLiquidityRatios({ currentRatio, quickRatio, cashRatio });
     }, [currentRatio, quickRatio, cashRatio, setLiquidityRatios]);
-
-
+    
     return(
       <>
       <Container>
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт поточної ліквідності (Current Ratio)</h5>
-            <Number>{currentRatio}</Number>            
+            <Tittle>Коефіцієнт поточної ліквідності (Current Ratio)</Tittle>
+            <Number>{currentRatio||''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт швидкої ліквідності (Quick Ratio)</h5>
-            <Number>{quickRatio}</Number>            
+            <Tittle>Коефіцієнт швидкої ліквідності (Quick Ratio)</Tittle>
+            <Number>{quickRatio||''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт абсолютної ліквідності (Cash Ratio)</h5>
-            <Number>{cashRatio}</Number>            
+            <Tittle>Коефіцієнт абсолютної ліквідності (Cash Ratio)</Tittle>
+            <Number>{cashRatio||''}</Number>            
         </ContainerCurrentRatio>
 
       </Container>

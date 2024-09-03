@@ -2,9 +2,9 @@ import { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
-import {Container,ContainerCurrentRatio, Number, ContainerAnalis, Text, Span} from './IndicatorsAssetEfficiency.styled';
+import {Container,ContainerCurrentRatio,Tittle, Number, ContainerAnalis, Text, Span} from './IndicatorsAssetEfficiency.styled';
 
-export const IndicatorsAssetEfficiency =({setIndicatorsAssetEfficiency})=>{
+export const IndicatorsAssetEfficiency =({setIndicatorsAssetEfficiency=()=>{}})=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -33,17 +33,17 @@ export const IndicatorsAssetEfficiency =({setIndicatorsAssetEfficiency})=>{
     <>
           <Container>
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт оборотності активів (Asset Turnover Ratio)</h5>
+            <Tittle>Коефіцієнт оборотності активів (Asset Turnover Ratio)</Tittle>
             <Number>{assetTurnoverRatio}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт оборотності запасів (Inventory Turnover Ratio)</h5>
+            <Tittle>Коефіцієнт оборотності запасів (Inventory Turnover Ratio)</Tittle>
             <Number>{inventoryTurnoverRatio}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт оборотності дебіторської заборгованості (Accounts Receivable Turnover Ratio)</h5>
+            <Tittle>Коефіцієнт оборотності дебіторської заборгованості (Accounts Receivable Turnover Ratio)</Tittle>
             <Number>{accountsReceivableTurnoverRatio}</Number>            
         </ContainerCurrentRatio>
 

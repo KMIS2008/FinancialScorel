@@ -1,10 +1,10 @@
-import {Container,ContainerCurrentRatio, Number, ContainerAnalis, Text, Span} from './OtherIndicatorsProfitability.styled';
+import {Container,ContainerCurrentRatio, Number,Tittle, ContainerAnalis, Text, Span} from './OtherIndicatorsProfitability.styled';
 import { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 
-export const OtherIndicatorsProfitability=({setOtherIndicatorsProfitability})=>{
+export const OtherIndicatorsProfitability=({setOtherIndicatorsProfitability=()=>{}})=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -29,12 +29,12 @@ export const OtherIndicatorsProfitability=({setOtherIndicatorsProfitability})=>{
     return(<>
            <Container>
         <ContainerCurrentRatio>
-            <h5>Чиста рентабельність капіталовкладень (ROI) (Return on Investment)</h5>
+            <Tittle>Чиста рентабельність капіталовкладень (ROI) (Return on Investment)</Tittle>
             <Number>{returnOnInvestment}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт покриття відсотків (Interest Coverage Ratio)</h5>
+            <Tittle>Коефіцієнт покриття відсотків (Interest Coverage Ratio)</Tittle>
             <Number>{interestCoverageRatio}</Number>            
         </ContainerCurrentRatio>
 

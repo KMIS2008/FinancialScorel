@@ -1,10 +1,10 @@
-import {Container, Number, ContainerCurrentRatio, ContainerAnalis, Text, Span} from './FinancialStrength.styled';
+import {Container, Number, Tittle, ContainerCurrentRatio, ContainerAnalis, Text, Span} from './FinancialStrength.styled';
 import { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 
-export const FinancialStrength=({setFinancialStrength})=>{
+export const FinancialStrength=({setFinancialStrength=()=>{}})=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -31,17 +31,17 @@ export const FinancialStrength=({setFinancialStrength})=>{
       <>
       <Container>
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт автономії (Equity Ratio)</h5>
+            <Tittle>Коефіцієнт автономії (Equity Ratio)</Tittle>
             <Number>{equityRatio}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт фінансового левериджу (Debt to Equity Ratio)</h5>
+            <Tittle>Коефіцієнт фінансового левериджу (Debt to Equity Ratio)</Tittle>
             <Number>{debtToEquityRatio}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Коефіцієнт фінансової стабільності (Financial Stability Ratio)</h5>
+            <Tittle>Коефіцієнт фінансової стабільності (Financial Stability Ratio)</Tittle>
             <Number>{financialStabilityRatio}</Number>            
         </ContainerCurrentRatio> 
       

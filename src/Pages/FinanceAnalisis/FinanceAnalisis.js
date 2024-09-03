@@ -54,7 +54,7 @@ export default function FinanceAnalisis(){
     <div ref={contentRef}>
           <Title>  Fiancial analisis </Title>
           <TitleItem>Liquidity analysis</TitleItem>
-          <LiquidityAnalysisForm setLiquidityRatios={setLiquidityRatios} />
+          <LiquidityAnalysisForm setLiquidityRatios={setLiquidityRatios} liquidityRatios={liquidityRatios}/>
           <TitleItem>Financial strength</TitleItem>
           <FinancialStrength setFinancialStrength={setFinancialStrength}/>
           <TitleItem>Indicators of profitability</TitleItem>

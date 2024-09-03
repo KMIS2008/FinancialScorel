@@ -1,1 +1,0 @@
-export const selectIdOrders=state=>state.orders.orders;

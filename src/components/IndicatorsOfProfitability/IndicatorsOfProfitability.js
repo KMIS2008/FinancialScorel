@@ -1,10 +1,10 @@
-import {Container, ContainerCurrentRatio, Number, ContainerAnalis, Text, Span}from './IndicatorsOfProfitability.styled';
+import {Container, ContainerCurrentRatio, Tittle, Number, ContainerAnalis, Text, Span}from './IndicatorsOfProfitability.styled';
 import { useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 
-export const IndicatorsOfProfitability=({setIndicatorsOfProfitability})=>{
+export const IndicatorsOfProfitability=({setIndicatorsOfProfitability=()=>{}})=>{
   const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -30,17 +30,17 @@ export const IndicatorsOfProfitability=({setIndicatorsOfProfitability})=>{
     <>
       <Container>
         <ContainerCurrentRatio>
-            <h5>Рентабельність активів (ROA) (Return on Assets)</h5>
+            <Tittle>Рентабельність активів (ROA) (Return on Assets)</Tittle>
             <Number>{returnonAssets}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Рентабельність власного капіталу (ROE) (Return on Equity)</h5>
+            <Tittle>Рентабельність власного капіталу (ROE) (Return on Equity)</Tittle>
             <Number>{returnOnEquity}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
-            <h5>Рентабельність продажів (ROS) (Return on Sales)</h5>
+            <Tittle>Рентабельність продажів (ROS) (Return on Sales)</Tittle>
             <Number>{returnOnSales}</Number>            
         </ContainerCurrentRatio>
 

@@ -74,9 +74,7 @@ export const DataForm=()=>{
     />
       {errors.currentLiabilities && <Error>{errors.currentLiabilities.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="stocks">Поточні активи</Label>
       <Input
@@ -100,9 +98,7 @@ export const DataForm=()=>{
     />
       {errors.CurrentLiabilities && <Error>{errors.CurrentLiabilities.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="equity">Власний капітал</Label>
       <Input
@@ -126,9 +122,7 @@ export const DataForm=()=>{
     />
       {errors.totalAssets && <Error>{errors.totalAssets.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="liabilities">Зобов’язання</Label>
       <Input
@@ -152,9 +146,7 @@ export const DataForm=()=>{
     />
       {errors.longTermLiabilities && <Error>{errors.longTermLiabilities.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="netProfit">Чистий прибуток</Label>
       <Input
@@ -178,9 +170,7 @@ export const DataForm=()=>{
     />
       {errors.revenue && <Error>{errors.revenue.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="cost">Собівартість реалізованих товарів</Label>
       <Input
@@ -204,9 +194,7 @@ export const DataForm=()=>{
     />
       {errors.stocksFirst && <Error>{errors.stocksFirst.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="stocksFinish">Запаси на кінець періода</Label>
       <Input
@@ -230,9 +218,7 @@ export const DataForm=()=>{
     />
       {errors.accountsReceivableFist && <Error>{errors.accountsReceivableFist.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="accountsReceivableFinish">Дебіторська заборгованість на кінець періода</Label>
       <Input
@@ -256,9 +242,7 @@ export const DataForm=()=>{
     />
       {errors.longTermFinancialInvestments && <Error>{errors.longTermFinancialInvestments.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="currentFinancialInvestments">Поточні фінансові інвестиції</Label>
       <Input
@@ -282,9 +266,7 @@ export const DataForm=()=>{
     />
       {errors.operatingProfit && <Error>{errors.operatingProfit.message}</Error>}
     </ContainerColumn>
-</ContainerFlex>
 
-<ContainerFlex>
     <ContainerColumn>
       <Label htmlFor="interestExpenses">Витрати на відсотки</Label>
       <Input

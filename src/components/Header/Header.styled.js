@@ -3,7 +3,12 @@ import styled from "styled-components";
 export const Container=styled.div`
 position: relative;
 height: 130px;
-background: ${p=>p.theme.colors.green}
+background: ${p=>p.theme.colors.green};
+
+@media (min-width: 1440px) {
+    height: 180px;
+}
+
 `
 export const Title=styled.h1`
 padding: ${p=>p.theme.spacing(4)};

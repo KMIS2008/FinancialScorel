@@ -54,14 +54,25 @@ cursor: pointer;
 &:hover{
     background: ${p=>p.theme.colors.yellow}; 
 }
+
+@media (min-width: 1440px) {
+  margin: 0 auto;
+width: 500px;
+height: 50px;
+}
 `
 
 export const ContainerFlex=styled.div`
 @media (min-width: 768px) {
-  display: flex;
-gap:5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+gap:10px;
 }
 
+@media (min-width: 1440px) {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:20px;
+}
 `
 
 export const ContainerColumn=styled.div`

@@ -5,6 +5,7 @@ import sprite from '../../images/sprite.svg';
 import {selectIdData} from '../../redux/data/selects';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
+import {NavigationLinks} from '../NavigateLinks/NavigateLinks';
 
 export const Header = () => {
   const [isOpen, setOpen]=useState(false);
@@ -41,7 +42,11 @@ export const Header = () => {
       {isTablet&& <Svg onClick={handleBurgerMenu}>
             <use xlinkHref={sprite + '#icon-burgermenu'} />
           </Svg>}
+
       {isOpen&&<Burgermenu onClose={handleBurgerMenu}/>}
+
+      {!isTablet&& <NavigationLinks isHeader={true}/>}
+
     </Container>
   );
 }
