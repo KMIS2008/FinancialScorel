@@ -30,12 +30,12 @@ export const OtherIndicatorsProfitability=({setOtherIndicatorsProfitability=()=>
            <Container>
         <ContainerCurrentRatio>
             <Tittle>Чиста рентабельність капіталовкладень (ROI) (Return on Investment)</Tittle>
-            <Number>{returnOnInvestment}</Number>            
+            <Number>{returnOnInvestment||''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт покриття відсотків (Interest Coverage Ratio)</Tittle>
-            <Number>{interestCoverageRatio}</Number>            
+            <Number>{interestCoverageRatio||''}</Number>            
         </ContainerCurrentRatio>
 
       </Container>

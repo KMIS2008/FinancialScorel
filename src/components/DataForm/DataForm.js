@@ -7,6 +7,7 @@ import { addData } from "redux/operations";
 import { useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid";
 
+
 const SignupSchema = Yup.object().shape({
   name: Yup.string(),
 });

@@ -14,15 +14,12 @@ import { saveAs } from 'file-saver';
 export default function FinanceAnalisis(){
     const contentRef = useRef();
 
-    // Функція для експорту в DOCX
     const handleExport = () => {
-      // Отримуємо HTML-контент з елемента
+
       const content = contentRef.current.innerHTML;
   
-      // Конвертуємо HTML-контент в формат DOCX
       const docx = htmlDocx.asBlob(content);
   
-      // Завантажуємо DOCX-файл
       saveAs(docx, 'document.docx');
     };
     
@@ -51,6 +48,7 @@ export default function FinanceAnalisis(){
     })
     
     return(<>
+
     <div ref={contentRef}>
           <Title>  Fiancial analisis </Title>
           <TitleItem>Liquidity analysis</TitleItem>
@@ -69,9 +67,9 @@ export default function FinanceAnalisis(){
                     isIndicatorsAssetEfficiency={isIndicatorsAssetEfficiency}
                     isOtherIndicatorsProfitability={isOtherIndicatorsProfitability}/>
 
-          
     </div>
     
-         <SubmitButton type='button' onClick={handleExport}>Експортувати в DOCX</SubmitButton>
+         <SubmitButton type='button' onClick={handleExport}>Експортувати в DOCX</SubmitButton> 
+  
     </>)
 }

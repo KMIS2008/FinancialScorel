@@ -31,17 +31,17 @@ export const IndicatorsOfProfitability=({setIndicatorsOfProfitability=()=>{}})=>
       <Container>
         <ContainerCurrentRatio>
             <Tittle>Рентабельність активів (ROA) (Return on Assets)</Tittle>
-            <Number>{returnonAssets}</Number>            
+            <Number>{returnonAssets||''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Рентабельність власного капіталу (ROE) (Return on Equity)</Tittle>
-            <Number>{returnOnEquity}</Number>            
+            <Number>{returnOnEquity||''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Рентабельність продажів (ROS) (Return on Sales)</Tittle>
-            <Number>{returnOnSales}</Number>            
+            <Number>{returnOnSales||''}</Number>            
         </ContainerCurrentRatio>
 
       </Container>

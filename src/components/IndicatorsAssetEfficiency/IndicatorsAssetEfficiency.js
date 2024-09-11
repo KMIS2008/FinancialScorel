@@ -34,17 +34,17 @@ export const IndicatorsAssetEfficiency =({setIndicatorsAssetEfficiency=()=>{}})=
           <Container>
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт оборотності активів (Asset Turnover Ratio)</Tittle>
-            <Number>{assetTurnoverRatio}</Number>            
+            <Number>{assetTurnoverRatio||''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт оборотності запасів (Inventory Turnover Ratio)</Tittle>
-            <Number>{inventoryTurnoverRatio}</Number>            
+            <Number>{inventoryTurnoverRatio||''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт оборотності дебіторської заборгованості (Accounts Receivable Turnover Ratio)</Tittle>
-            <Number>{accountsReceivableTurnoverRatio}</Number>            
+            <Number>{accountsReceivableTurnoverRatio||''}</Number>            
         </ContainerCurrentRatio>
 
       </Container>

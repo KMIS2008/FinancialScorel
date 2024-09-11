@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import {Container, Button} from './NavigateLinks.styled';
 
-export const NavigationLinks=({onClose, isHeader=false})=>{
+export const NavigationLinks=({onClose=()=>{}, isHeader=false})=>{
     const navigate=useNavigate();
     const location = useLocation(); 
 

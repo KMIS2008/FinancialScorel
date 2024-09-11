@@ -32,17 +32,17 @@ export const FinancialStrength=({setFinancialStrength=()=>{}})=>{
       <Container>
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт автономії (Equity Ratio)</Tittle>
-            <Number>{equityRatio}</Number>            
+            <Number>{equityRatio||0}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт фінансового левериджу (Debt to Equity Ratio)</Tittle>
-            <Number>{debtToEquityRatio}</Number>            
+            <Number>{debtToEquityRatio||0}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт фінансової стабільності (Financial Stability Ratio)</Tittle>
-            <Number>{financialStabilityRatio}</Number>            
+            <Number>{financialStabilityRatio||0}</Number>            
         </ContainerCurrentRatio> 
       
       </Container>    
