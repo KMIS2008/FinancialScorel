@@ -31,17 +31,17 @@ export const LiquidityAnalysisForm=({ setLiquidityRatios=()=>{}})=>{
       <Container>
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт поточної ліквідності (Current Ratio)</Tittle>
-            <Number>{currentRatio||''}</Number>            
+            <Number>{currentRatio??""}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт швидкої ліквідності (Quick Ratio)</Tittle>
-            <Number>{quickRatio||''}</Number>            
+            <Number>{quickRatio??''}</Number>            
         </ContainerCurrentRatio>
 
         <ContainerCurrentRatio>
             <Tittle>Коефіцієнт абсолютної ліквідності (Cash Ratio)</Tittle>
-            <Number>{cashRatio||''}</Number>            
+            <Number>{cashRatio??''}</Number>            
         </ContainerCurrentRatio>
 
       </Container>
