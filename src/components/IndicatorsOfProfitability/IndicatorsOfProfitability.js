@@ -22,9 +22,6 @@ export const IndicatorsOfProfitability=({setIndicatorsOfProfitability=()=>{}})=>
       const revenue = data.length > 0 ? data[data.length - 1].revenue : '';
       const returnOnSales=((netProfit/revenue)*100).toFixed(2);
 
-      useEffect(()=>{
-        setIndicatorsOfProfitability({returnonAssets, returnOnEquity, returnOnSales})
-      }, [returnonAssets, returnOnEquity, returnOnSales,setIndicatorsOfProfitability])
 
     return(
     <>

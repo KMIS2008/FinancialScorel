@@ -4,7 +4,7 @@ import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 import {Container,ContainerCurrentRatio,Tittle, Number, ContainerAnalis, Text, Span} from './IndicatorsAssetEfficiency.styled';
 
-export const IndicatorsAssetEfficiency =({setIndicatorsAssetEfficiency=()=>{}})=>{
+export const IndicatorsAssetEfficiency =()=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -25,9 +25,6 @@ export const IndicatorsAssetEfficiency =({setIndicatorsAssetEfficiency=()=>{}})=
     const accountsReceivableFinish = data.length > 0 ? data[data.length - 1].accountsReceivableFinish : '';
     const accountsReceivableTurnoverRatio=(revenue/((+accountsReceivableFist + +accountsReceivableFinish)/2)).toFixed(2);
 
-    useEffect(()=>{
-      setIndicatorsAssetEfficiency( {assetTurnoverRatio, inventoryTurnoverRatio, accountsReceivableTurnoverRatio})
-    }, [assetTurnoverRatio, inventoryTurnoverRatio, accountsReceivableTurnoverRatio, setIndicatorsAssetEfficiency])
 
     return(
     <>

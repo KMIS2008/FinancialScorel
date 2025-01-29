@@ -11,6 +11,7 @@ const handlPending = (state)=> {
     state.isLoading = true}
 
 const handlFulfilled = (state, action)=>{
+    console.log(action.payload)
     state.data = action.payload;
     state.isLoading = false;
     state.error = null;

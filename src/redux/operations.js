@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import { NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
-axios.defaults.baseURL =  "https://financial-scoring-backend.onrender.com/api";
+// axios.defaults.baseURL =  "https://financial-scoring-backend.onrender.com/api";
 
 // const DATA_URL= '/data';
 
@@ -47,8 +47,9 @@ export const addData = createAsyncThunk('data/add', async(data, thunkAPI)=>{
     }
 })
 
-export const addFinancial = createAsyncThunk('financial/add', async(data, thunkAPI)=>{
+export const addFinancial = createAsyncThunk('financial', async(data, thunkAPI)=>{
     try {
+    console.log(data)
         const response = await axios.post("https://financial-scoring-backend.onrender.com/api/finance", data);
     
         return response.data;

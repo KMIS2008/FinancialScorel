@@ -4,31 +4,56 @@ import {Form, Label, CommentTextArea, SubmitButton} from './Textarea.styled'
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { addFinancial } from 'redux/operations';
-import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
+import { useDispatch, useSelector } from 'react-redux';
+import {selectIdData} from '../../redux/data/selects';
 
 const SignupSchema = Yup.object().shape({
     comment: Yup.string()
       .max(500, 'Коментар не може перевищувати 500 символів'), 
   });
 
-export const Textarea=({ liquidityRatios, isFinancialStrength, isIndicatorsOfProfitability, isIndicatorsAssetEfficiency, isOtherIndicatorsProfitability })=>{
+export const Textarea=()=>{
     const dispatch=useDispatch();
+    const financials=useSelector(selectIdData);
+    const lastFinancial = financials?.[financials.length - 1] || {};
+
+    const filteredFinancial = {
+      nameCompany: lastFinancial.nameCompany,
+      currentAssets: lastFinancial.currentAssets,
+      currentLiabilities: lastFinancial.currentLiabilities,
+      stocks: lastFinancial.stocks,
+      money: lastFinancial.money,
+      equity: lastFinancial.equity,
+      totalAssets: lastFinancial.totalAssets,
+      liabilities: lastFinancial.liabilities,
+      longTermLiabilities: lastFinancial.longTermLiabilities,
+      netProfit: lastFinancial.netProfit,
+      revenue: lastFinancial.revenue,
+      cost: lastFinancial.cost,
+      stocksFirst: lastFinancial.stocksFirst,
+      stocksFinish: lastFinancial.stocksFinish,
+      accountsReceivableFist: lastFinancial.accountsReceivableFist,
+      accountsReceivableFinish: lastFinancial.accountsReceivableFinish,
+      longTermFinancialInvestments: lastFinancial.longTermFinancialInvestments,
+      currentFinancialInvestments: lastFinancial.currentFinancialInvestments,
+      interestExpenses: lastFinancial.interestExpenses,
+      operatingProfit: lastFinancial.operatingProfit,
+    };
+    
+    
 
     const { register, handleSubmit, formState: { errors }, reset } =  useForm({
         resolver: yupResolver(SignupSchema),
       });
 
   const onSubmit = (data) => {
-     const _id=nanoid();
-     const indicators = {_id, 
-                         ...data, 
-                         ...liquidityRatios, 
-                         ...isFinancialStrength,
-                         ...isIndicatorsOfProfitability,
-                         ...isIndicatorsAssetEfficiency, 
-                         ...isOtherIndicatorsProfitability
+console.log(data)
+     const indicators = {
+                          ...data,
+                         ...filteredFinancial,
+                         
                         };
+                        console.log(indicators)
       dispatch(addFinancial(indicators));
       reset();
   };

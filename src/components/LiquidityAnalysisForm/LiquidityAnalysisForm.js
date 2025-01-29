@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {fetchdata} from '../../redux/operations';
 import {selectIdData} from '../../redux/data/selects';
 
-export const LiquidityAnalysisForm=({ setLiquidityRatios=()=>{}})=>{
+export const LiquidityAnalysisForm=()=>{
     const data = useSelector(selectIdData);
     const dispatch=useDispatch();
 
@@ -22,9 +22,6 @@ export const LiquidityAnalysisForm=({ setLiquidityRatios=()=>{}})=>{
       const money=data.length > 0 ? data[data.length - 1].money : '';
       const cashRatio=(money/currentLiabilities).toFixed(2);
 
-      useEffect(() => {
-        setLiquidityRatios({ currentRatio, quickRatio, cashRatio });
-    }, [currentRatio, quickRatio, cashRatio, setLiquidityRatios]);
     
     return(
       <>
